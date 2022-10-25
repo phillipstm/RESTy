@@ -1,4 +1,11 @@
-# Getting Started with Create React App
+# Project : RESTy
+
+## Author : Teresa Phillips
+
+[uml](src/components/assets/UML _ RESTy.png)
+
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
