@@ -1,13 +1,14 @@
-import React from 'react';
+import './results.scss';
 
-class Results extends React.Component {
-  render() {
+
+const Results = ({data}) => {
+  
     return (
       <section>
-        <pre>{this.props.data ? JSON.stringify(this.props.data, undefined, 2) : null}</pre>
+        <pre>{{data} ? JSON.stringify({data}, undefined, 2) : null}</pre>
       </section>
     );
-  }
+  
 }
 
 export default Results;
