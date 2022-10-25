@@ -11,18 +11,10 @@ body {
   height: 100%;
 
   #root {
-    display: flex;
+    display: flex-box;
     flex-direction: column;
     height: 100%;
   }
-
-  footer {
-    background: darken($backgroundColor, 50);
-    border-top: 1px solid #eee;
-    padding: 1em 3em;
-    margin: 0;
-  }
-
   header {
     background: darken($backgroundColor, 75);
     border-bottom: 1px solid #eee;
@@ -30,5 +22,26 @@ body {
     padding: 0;
     margin: 0;
     text-align: center;
+  }
+  form {
+    color: #eee;
+    text-align: center;
+    height: 65px x 735px;
+    flex-direction: flex-start;
+    justify-content: center;
+  }
+  results {
+    color: #eee;
+    background: lighten($backgroundColor, 40);
+    height: 550px x 500px;
+    text-align: left;
+    display: inline-block;
+    padding: 5%;
+  }
+  footer {
+    background: darken($backgroundColor, 50);
+    border-top: 1px solid #eee;
+    padding: 1em 3em;
+    margin: 0;
   }
 }

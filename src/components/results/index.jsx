@@ -1,4 +1,4 @@
-// import './results.scss';
+import './results.scss';
 
 
 const Results = ({data}) => {
