@@ -1,4 +1,4 @@
-
+import { useState } from 'react';
 
 import './form.scss';
 
@@ -12,7 +12,16 @@ function Form ({handleApiCall}) {
     };
     handleApiCall(formData);
   }
-
+  // callApi = (requestParams) => {
+      // // mock output
+      // const data = {
+      //   count: 2,
+      //   results: [
+      //     {name: 'fake thing 1', url: 'http://fakethings.com/1'},
+      //     {name: 'fake thing 2', url: 'http://fakethings.com/2'},
+      //   ],
+      // };
+      // this.setState({data, requestParams});
 
   return (
     <>

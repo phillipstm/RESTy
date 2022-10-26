@@ -1,4 +1,5 @@
 import './results.scss';
+// import { useState } from 'react';
 
 
 const Results = ({data}) => {

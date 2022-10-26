@@ -1,5 +1,4 @@
 import React from 'react';
-
 import './App.scss';
 
 // Let's talk about using index.js and some other name in the component folder
@@ -10,7 +9,7 @@ import Form from './components/form';
 import Results from './components/results';
 
 class App extends React.Component {
-
+// function App(){}
   constructor(props) {
     super(props);
     this.state = {
