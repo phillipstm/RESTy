@@ -2,15 +2,14 @@ import { useState } from 'react';
 
 import './form.scss';
 
-function Form ({handleApiCall}) {
+function Form (props) {
+  const [method, setMethod] = useState('');
+  const[url, setUrl] = useState('');
 
   const handleSubmit = e => {
     e.preventDefault();
-    const formData = {
-      method:'GET',
-      url: 'https://pokeapi.co/api/v2/pokemon',
-    };
-    handleApiCall(formData);
+    
+    props.handleApiCall({method, url});
   }
   // callApi = (requestParams) => {
       // // mock output
@@ -28,14 +27,14 @@ function Form ({handleApiCall}) {
       <form onSubmit={handleSubmit}>
         <label >
           <span>URL: </span>
-          <input name='url' type='text' />
+          <input onChange={(e) => setUrl(e.target.value)} name='url' type='text' />
           <button type="submit">GO!</button>
         </label>
         <label className="methods">
-          <span id="get">GET</span>
-          <span id="post">POST</span>
-          <span id="put">PUT</span>
-          <span id="delete">DELETE</span>
+          <span id="get" onClick={(e) => setMethod('get')}>GET</span>
+          <span id="post" onClick={(e) => setMethod('post')}>POST</span>
+          <span id="put" onClick={(e) => setMethod('put')}>PUT</span>
+          <span id="delete" onClick={(e) => setMethod('delete')}>DELETE</span>
         </label>
       </form>
     </>
