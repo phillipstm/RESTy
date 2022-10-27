@@ -6,7 +6,7 @@ const Results = ({data}) => {
   
     return (
       <section>
-        <pre>{{data} ? JSON.stringify({data}, undefined, 2) : null}</pre>
+        <pre data-testid="pre">{{data} ? JSON.stringify({data}, undefined, 2) : null}</pre>
       </section>
     );
   
