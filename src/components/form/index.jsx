@@ -6,7 +6,7 @@ function Form (props) {
   const [method, setMethod] = useState('');
   const[url, setUrl] = useState('');
   // const [json, setJson] = useState('');
-
+  
   const handleSubmit = e => {
     e.preventDefault();
     
@@ -37,11 +37,11 @@ function Form (props) {
           <span id="put" onClick={(e) => setMethod('put')}>PUT</span>
           <span id="delete" onClick={(e) => setMethod('delete')}>DELETE</span>
         </label>
-        {/* <label>
+        {/* <section>
           <span>
           <textarea onChange={(e) => setTextarea(e.target.value)}/textarea>
           </span> 
-        </label> */}
+        </section> */}
       </form>
     </>
   );

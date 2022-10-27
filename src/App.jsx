@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.scss';
+import List from '../src/components/list';
 
 // Let's talk about using index.js and some other name in the component folder
 // There's pros and cons for each way of doing this ...
@@ -12,6 +13,8 @@ import Results from './components/results';
 const App = () => {
   const [data, setData] = useState(null);
   const [requestParams, setRequestParams] = useState({});
+  const [pokemonList, setPokemonList] = useState([]);
+  
 
 
   const callApi = (requestParams) => {
@@ -34,6 +37,7 @@ const App = () => {
       <div>URL: {requestParams.url}</div>
       <Form handleApiCall={callApi} />
       <Results data={data} />
+      <li key={`poke-{index}`}>{pokemon.name}</li>
       <Footer />
     </>
   );
