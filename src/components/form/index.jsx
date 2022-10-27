@@ -10,7 +10,7 @@ function Form (props) {
   const handleSubmit = e => {
     e.preventDefault();
     
-    props.handleApiCall({method, url});
+    props.handleApiCall({method, url, textarea});
   }
   // callApi = (requestParams) => {
       // // mock output
@@ -28,7 +28,7 @@ function Form (props) {
       <form onSubmit={handleSubmit}>
         <label >
           <span>URL: </span>
-          <input onChange={(e) => setUrl(e.target.value)} name='url' type='text' />
+          <input onChange={(e) => setUrl(e.target.value)} name='url' type='text' textarea={JSON.stringify} />
           <button type="submit">GO!</button>
         </label>
         <label className="methods">
@@ -39,9 +39,9 @@ function Form (props) {
         </label>
         {/* <label>
           <span>
-          <textarea onChange={(e) => setTextarea(e.target.json)/textarea>
-          </span> */}
-        {/* </label> */}
+          <textarea onChange={(e) => setTextarea(e.target.value)}/textarea>
+          </span> 
+        </label> */}
       </form>
     </>
   );
