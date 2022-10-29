@@ -1,6 +1,7 @@
 $backgroundColor: #f5f5f5;
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -15,6 +16,7 @@ body {
     flex-direction: column;
     height: 100%;
   }
+
   header {
     background: darken($backgroundColor, 75);
     border-bottom: 1px solid #eee;
@@ -23,6 +25,7 @@ body {
     margin: 0;
     text-align: center;
   }
+
   form {
     color: #eee;
     text-align: center;
@@ -30,6 +33,7 @@ body {
     flex-direction: flex-start;
     justify-content: center;
   }
+
   results {
     color: #eee;
     background: lighten($backgroundColor, 40);
@@ -38,10 +42,38 @@ body {
     display: inline-block;
     padding: 5%;
   }
+
   footer {
     background: darken($backgroundColor, 50);
     border-top: 1px solid #eee;
     padding: 1em 3em;
     margin: 0;
   }
+
+  pre {
+    outline: 1px solid #ccc;
+    padding: 5px;
+    margin: 5px;
+  }
+
+  .string {
+    color: green;
+  }
+
+  .number {
+    color: darkorange;
+  }
+
+  .boolean {
+    color: blue;
+  }
+
+  .null {
+    color: magenta;
+  }
+
+  .key {
+    color: red;
+  }
+
 }
