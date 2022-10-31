@@ -1,12 +1,11 @@
 import './results.scss';
 // import { useState } from 'react';
 
-
 const Results = ({data}) => {
   
     return (
       <section>
-        <pre data-testid="pre">{{data} ? JSON.stringify({data}, undefined, 2) : null}</pre>
+        <pre data-testid="results-pre">{{data} ? JSON.stringify({data}, undefined, 2) : null}</pre>
       </section>
     );
   

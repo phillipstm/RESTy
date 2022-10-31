@@ -5,5 +5,50 @@ section {
     display: inline-block;
     justify-content: left;
     padding: 5%;
+    body {
+
+    results {
+        color: #eee;
+        background: lighten($backgroundColor, 40);
+        height: 550px x 500px;
+        text-align: left;
+        display: inline-block;
+        padding: 5%;
+    }
+
+    footer {
+        background: darken($backgroundColor, 50);
+        border-top: 1px solid #eee;
+        padding: 1em 3em;
+        margin: 0;
+    }
+
+    pre {
+        outline: 1px solid #ccc;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .string {
+        color: green;
+    }
+
+    .number {
+        color: darkorange;
+    }
+
+    .boolean {
+        color: blue;
+    }
+
+    .null {
+        color: magenta;
+    }
+
+    .key {
+        color: red;
+    }
+
+}
 
 }

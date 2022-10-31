@@ -6,11 +6,12 @@ function Form (props) {
   const [method, setMethod] = useState('');
   const[url, setUrl] = useState('');
   // const [json, setJson] = useState('');
+  const[data, setData] = useState('');
 
   const handleSubmit = e => {
     e.preventDefault();
     
-    props.handleApiCall({method, url});
+    props.handleApiCall({method, url, data});
   }
   // callApi = (requestParams) => {
       // // mock output
@@ -28,8 +29,12 @@ function Form (props) {
       <form onSubmit={handleSubmit}>
         <label >
           <span>URL: </span>
-          <input onChange={(e) => setUrl(e.target.value)} name='url' type='text' />
+          <input data-testid="form-url" onChange={(e) => setUrl(e.target.value)} name='url' type='text' />
           <button type="submit">GO!</button>
+        </label>
+        <label id="textarea">
+        Data Input: 
+        <textarea data-testid="form-textarea" rows="5" cols="33" onChange={(e) => setData(e.target.value)/textarea>
         </label>
         <label className="methods">
           <span id="get" onClick={(e) => setMethod('get')}>GET</span>
@@ -37,11 +42,6 @@ function Form (props) {
           <span id="put" onClick={(e) => setMethod('put')}>PUT</span>
           <span id="delete" onClick={(e) => setMethod('delete')}>DELETE</span>
         </label>
-        {/* <label>
-          <span>
-          <textarea onChange={(e) => setTextarea(e.target.json)/textarea>
-          </span> */}
-        {/* </label> */}
       </form>
     </>
   );

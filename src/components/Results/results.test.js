@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom'
 import { render, screen } from '@testing-library/react';
-import Results from '../src/components/results/index';
+import Results from './index';
 
 describe('Results Component', () => {
     it('renders data from props as expected', () => {
@@ -19,7 +19,7 @@ describe('Results Component', () => {
         render(<Results />);
         let pre = screen.getByTestId('pre');
 
-        expect(pre).toHaveContent('');
+        expect(pre).toHaveContent('gorilla');
     });
 
 });
